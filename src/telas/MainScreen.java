@@ -39,7 +39,7 @@ public class MainScreen extends JFrame{
 			}
 		});
 		
-		atualizar = new JButton("Atualizer um cliente");
+		atualizar = new JButton("Atualizar um cliente");
 		atualizar.setBounds(100, 280, 200, 20);
 		atualizar.addActionListener(new ActionListener(){
 			@Override

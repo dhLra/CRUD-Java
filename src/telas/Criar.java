@@ -95,38 +95,36 @@ public class Criar extends JFrame {
 		
 		Cliente c = new Cliente();
 		
-		String nome = txt_nome.getText();
-			c.setNome(nome);
-		
-		String email = txt_email.getText();
-			c.setEmail(email);
-		
-		String cpf = txt_cpf.getText();
-			c.setCpf(cpf);
-		
-		String nascimento = txt_nascimento.getText();
-			c.setNascimento(nascimento);
-		
-		
+			c.setNome(txt_nome.getText());
+			c.setEmail(txt_email.getText());
+			c.setCpf(txt_cpf.getText());
+			c.setNascimento(txt_nascimento.getText());
+			
 			try {
 				
 				FileWriter fw = new FileWriter("clientes.txt",true);
 				PrintWriter pw = new PrintWriter(fw);
-				pw.println("Nome: " + c.getNome());
-				pw.println("Email: " + c.getEmail());
-				pw.println("CPF: " + c.getCpf());
-				pw.println("Nascimento: " + c.getNascimento());
-				pw.flush();
+					pw.println("Nome: " + c.getNome());
+					pw.println("Email: " + c.getEmail());
+					pw.println("CPF: " + c.getCpf());
+					pw.println("Nascimento: " + c.getNascimento());
+					pw.println("");
+					pw.flush();
 				
 				pw.close();
 				fw.close();
+				
+				Aviso v = new Aviso();
+				v.TipoAviso(0);
+				v.setVisible(true);
+			
 				
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			
-		
+			
 	}
 	
 }

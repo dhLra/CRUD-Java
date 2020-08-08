@@ -1,6 +1,5 @@
 package app;
 
-//import telas.Atualizar;
 import telas.MainScreen;
 
 public class App {

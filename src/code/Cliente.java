@@ -47,8 +47,4 @@ public class Cliente {
 		this.nascimento = nascimento;
 	}
 	
-	
-	
-	
-	
 }
